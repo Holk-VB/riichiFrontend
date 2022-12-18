@@ -1,16 +1,24 @@
 # Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This school project is developed using Vue 3, TypeScript and Vite to build a frontend accessing the backend Mahjong API.
 
-## Recommended IDE Setup
+Vue 3 views all uses `<script setup>`, `<template>` and `<style>`:
+1. `<script setup>` contains all constants and functions that will be used in the view, for more info check out [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup).
+2. `<template>`is an HTML based template that allow you to bind data from script onto DOM elements, for more info check out [template docs](https://vuejs.org/guide/essentials/template-syntax.html#basic-syntax). 
+3. `<style>`which contains all the CSS of the page.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+This frontend is very basic and uses bootstrap to get some easy to use css classes.
 
-## Type Support For `.vue` Imports in TS
+Yet it can be used as a reference to understand how the different Vue elements interact with each other. Components are parts of views that can be used in many pages. Creating components serves the same purpose as creating functions for repeated lines of code. 
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+## Vue-router + Vuex + Axios
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+Some addons were needed to make use of the backend API properly:
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+1. Vue-router is used to create the routes of the frontend and to navigate between pages, its corresponding configuration file is router.ts. [here are the docs](https://router.vuejs.org/guide/).
+2. Vuex is used to store data onto the frontend here it is used to store player and game data between API calls, its corresponding configuration file is vuex.ts. [here are the docs](https://vuex.vuejs.org/guide/)
+3. Axios is used to make API calls with a specific header which permit user authentication via token, its corresponding configuration file is axios-api.ts. [here are the docs](https://axios-http.com/docs/api_intro)
+
+## TODO
+
+1. Implement a **visually pleasing** game interface
